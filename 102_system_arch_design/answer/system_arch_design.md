@@ -11,7 +11,7 @@ Customers install an Agent component in their cluster, which pushes metrics to a
 ## Design Plan
 From an architectural governance perspective, this can be seen as a control plane and a data plane: the control plane is our server, and the data plane is the client. The agent can be treated similarly to an Istio sidecar.
 
-<img src="img/design.png" alt="design" width="650" height="350">
+<img src="img/design.png" alt="design" width="550" height="450">
 
 1. control-plane
    - controller 

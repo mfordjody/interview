@@ -273,11 +273,11 @@ spec:
 In the design background, it is mentioned that spot instances in public clouds are cheaper. This approach can replace on-demand instances, thereby maximizing the utilization of spot instances.
 Based on this scenario, design a spot instance resource pool adapted for public clouds to meet the requirements.
 
-<img src="img/public_cloud.png" alt="public_cloud" width="650" height="350">
+<img src="img/public_cloud.png" alt="public_cloud" width="650" height="450">
 
 By declaring `minimum` and `maximum`, you allow for the `minimum` and `maximum` number of instances. Once these minimum and maximum instance numbers are declared, the operator will automatically provision instances. If an instance is automatically released by the cloud provider, the operator will, at a fixed interval, check whether the number of instances in the resource pool meets the defined expectations. If it does not, meaning it has detected that an instance was released, it will create a new one to replenish the pool, maintaining the compute resource pool at five instances.
 
-<img src="img/operator.png" alt="operator" width="650" height="350">
+<img src="img/operator.png" alt="operator" width="550" height="350">
 
 Integrate SDKs from different cloud providers to create instances
 ```yaml
